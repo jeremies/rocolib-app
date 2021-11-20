@@ -9,9 +9,10 @@ import { GymsComponent } from './gyms/gyms.component';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
+import { BoulderListComponent } from './boulders/boulder-list/boulder-list.component';
 
 @NgModule({
-  declarations: [AppComponent, GymsComponent],
+  declarations: [AppComponent, GymsComponent, BoulderListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
