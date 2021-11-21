@@ -1,1 +1,9 @@
-<p>boulder-detail works!</p>
+<p>{{ boulder.name }}</p>
+<img
+  #image
+  src="https://rocolib.herokuapp.com/static/images/walls/{{ gymId }}/{{
+    boulder.section
+  }}.JPG"
+  class="boulder-image"
+/>
+<canvas #canvas></canvas>

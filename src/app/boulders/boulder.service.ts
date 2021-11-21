@@ -12,4 +12,8 @@ export class BoulderService {
   setBoulders(boulders: Boulder[]) {
     this.boulders = boulders;
   }
+
+  getBoulder(_id: string): Boulder {
+    return this.boulders.find((boulder) => boulder._id === _id)!;
+  }
 }

@@ -3,7 +3,7 @@
     mat-list-item
     style="cursor: pointer"
     *ngFor="let boulder of boulders"
-    href="boulders/{{ boulder._id }}"
+    routerLink="{{ boulder._id }}"
   >
     <mat-icon mat-list-icon [style.color]="boulder.difficulty">circle</mat-icon>
     <div matLine>{{ boulder.name }}</div>

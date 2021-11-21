@@ -7,7 +7,7 @@ import { GymsComponent } from './gyms/gyms.component';
 const routes: Routes = [
   { path: 'gyms', component: GymsComponent },
   { path: 'boulders', component: BoulderListComponent },
-  { path: 'boulders/:id', component: BoulderDetailComponent },
+  { path: 'boulders/:_id', component: BoulderDetailComponent },
 ];
 
 @NgModule({
