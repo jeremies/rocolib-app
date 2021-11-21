@@ -4,10 +4,16 @@ import { map, tap } from 'rxjs/operators';
 
 import { GymService } from '../gyms/gym.service';
 import { Gym } from '../gyms/gym.model';
+import { Boulder } from '../boulders/boulder.model';
+import { BoulderService } from '../boulders/boulder.service';
 
 @Injectable({ providedIn: 'root' })
 export class DataStorageService {
-  constructor(private http: HttpClient, private gymService: GymService) {}
+  constructor(
+    private http: HttpClient,
+    private gymService: GymService,
+    private boulderService: BoulderService
+  ) {}
 
   fetchGyms() {
     return this.http
@@ -16,6 +22,19 @@ export class DataStorageService {
         map((data) => data.gyms),
         tap((gyms) => {
           this.gymService.setGyms(gyms);
+        })
+      );
+  }
+
+  fetchBoulders(gymId: string) {
+    return this.http
+      .get<{ boulders: Boulder[] }>(
+        `https://rocolib.herokuapp.com/api/boulders/${gymId}/list`
+      )
+      .pipe(
+        map((data) => data.boulders),
+        tap((boulders) => {
+          this.boulderService.setBoulders(boulders);
         })
       );
   }

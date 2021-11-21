@@ -8,17 +8,20 @@ import { GymsComponent } from './gyms/gyms.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { BoulderListComponent } from './boulders/boulder-list/boulder-list.component';
+import { BoulderDetailComponent } from './boulders/boulder-detail/boulder-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, GymsComponent, BoulderListComponent],
+  declarations: [AppComponent, GymsComponent, BoulderListComponent, BoulderDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatListModule,
     MatDividerModule,
+    MatIconModule,
     HttpClientModule,
   ],
   providers: [],

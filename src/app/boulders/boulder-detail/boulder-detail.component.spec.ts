@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BoulderListComponent } from './boulder-list.component';
+import { BoulderDetailComponent } from './boulder-detail.component';
 
-describe('BoulderListComponent', () => {
-  let component: BoulderListComponent;
-  let fixture: ComponentFixture<BoulderListComponent>;
+describe('BoulderDetailComponent', () => {
+  let component: BoulderDetailComponent;
+  let fixture: ComponentFixture<BoulderDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BoulderListComponent ]
+      declarations: [ BoulderDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BoulderListComponent);
+    fixture = TestBed.createComponent(BoulderDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
